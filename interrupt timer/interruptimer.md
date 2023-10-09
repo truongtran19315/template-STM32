@@ -33,7 +33,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
 #--------------------------------------------------------------------------------------------------------------------
 
-in file softwaretimer.h:
+in file software_timer.h:
 #ifndef INC_SOFTWARE_TIMER_H_
 #define INC_SOFTWARE_TIMER_H_
 
@@ -46,7 +46,7 @@ void timerRun();
 
 #--------------------------------------------------------------------------------------------------------------------
 
-in file softwaretimer.c:
+in file software_timer.c:
 #include "software_timer.h"
 
 int timer1_counter = 0;

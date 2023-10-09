@@ -1,6 +1,6 @@
 {
     "files.associations": {
-        "*.md": "bat",
+        "*.md": "markdown",
         "software_timer.h": "c"
     }
 }
