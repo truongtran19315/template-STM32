@@ -1,6 +1,8 @@
 
 #include "button.h"
 
+int button1_flag = 0;
+
 int KeyReg0 = NORMAL_STARE;
 int KeyReg1 = NORMAL_STARE;
 int KeyReg2 = NORMAL_STARE;
@@ -9,7 +11,7 @@ int KeyReg3 = NORMAL_STARE; //trạng thái ổn đinh trước đó
 int TimerForKeyPress = 200; //thời gian nhấn đè 2s để xử lý
 
 void subKeyProcess(){
-    //TODO
+    button1_flag = 1;
 }
 
 void getKeyInput(){ //được gọi mỗi 10ms một lần
@@ -28,15 +30,16 @@ void getKeyInput(){ //được gọi mỗi 10ms một lần
         else{   //Trường hợp nhấn đè
             TimerForKeyPress--;
             if(TimerForKeyPress == 0){
-                //TODO
-                /*
-                if(KeyReg2 == PRESSED_STATE){   //fix lỗi [1]
-                    subKeyProcess();
-                }
-                TimerForKeyPress = 200
-                */
                 KeyReg3 = NORMAL_STARE;
             }
         }
     }
+}
+
+int isButton1Pressed(){
+    if(button1_flag == 1){
+        button1_flag == 0;
+        return 1;
+    }
+    return 0;
 }
