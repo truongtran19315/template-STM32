@@ -67,3 +67,6 @@ void timerRun(){
 }
 
 ```
+- Cách tính Prescaler và Couter:
+  ![](interrup_timer.png)
+
